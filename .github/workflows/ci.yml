@@ -23,16 +23,16 @@ jobs:
         include:
           - name: bionic-py36-gcc7
             host: ubuntu-18.04
-            packages: python3 python3-distutils python3.6-dev gcc-7-multilib
+            packages: python3 python3.6-dev gcc-7-multilib
           - name: focal-py38-gcc9
             host: ubuntu-20.04
-            packages: python3 python3-distutils python3.8-dev gcc-9-multilib
+            packages: python3 python3.8-dev gcc-9-multilib
           - name: jammy-py310-gcc11
             host: ubuntu-22.04
-            packages: python3 python3-distutils python3.10-dev gcc-11-multilib
+            packages: python3 python3.10-dev gcc-11-multilib
           - name: jammy-py310-clang14
             host: ubuntu-22.04
-            packages: python3 python3-distutils python3.10-dev clang-14
+            packages: python3 python3.10-dev clang-14
             preinstall: |
               sudo rm -f /usr/bin/x86_64-linux-gnu-gcc
               sudo ln -s /usr/bin/clang-14 /usr/bin/x86_64-linux-gnu-gcc

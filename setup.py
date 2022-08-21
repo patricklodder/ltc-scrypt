@@ -13,7 +13,12 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from distutils.core import setup, Extension
+from sys import version_info 
+
+if version_info < (3, 8):
+    from distutils.core import setup, Extension
+else:
+    from setuptools import setup, Extension
 
 ltc_scrypt_module = Extension('ltc_scrypt',
                                sources = ['scryptmodule.c',
